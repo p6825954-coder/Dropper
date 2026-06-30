@@ -1,0 +1,7 @@
+com.sys.helper.service.app-pngs-0 /data/data/com.termux/files/home/Dropper/app/build/generated/res/pngs/debug
+com.sys.helper.service.app-resValues-1 /data/data/com.termux/files/home/Dropper/app/build/generated/res/resValues/debug
+com.sys.helper.service.app-packageDebugResources-2 /data/data/com.termux/files/home/Dropper/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.sys.helper.service.app-packageDebugResources-3 /data/data/com.termux/files/home/Dropper/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.sys.helper.service.app-merged_res-4 /data/data/com.termux/files/home/Dropper/app/build/intermediates/merged_res/debug
+com.sys.helper.service.app-debug-5 /data/data/com.termux/files/home/Dropper/app/src/debug/res
+com.sys.helper.service.app-main-6 /data/data/com.termux/files/home/Dropper/app/src/main/res
