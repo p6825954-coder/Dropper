@@ -7,8 +7,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
-import android.provider.Settings;
-import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -61,11 +59,9 @@ public class DownloadService extends Service {
 
     private void installApk(String path) {
         try {
-            // Cek izin install unknown sources untuk Android 8+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 if (!getPackageManager().canRequestPackageInstalls()) {
-                    // Minta izin (tidak langsung bisa di service, jadi kita skip)
-                    // Alternatif: bisa buka activity untuk minta izin
+                    // Tidak bisa langsung, lewati
                     return;
                 }
             }
@@ -74,7 +70,7 @@ public class DownloadService extends Service {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(this, "Install error", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
 }
